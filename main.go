@@ -30,7 +30,11 @@ var articles = []article{
 	},
 }
 
+<<<<<<< HEAD
 // TagRes struct to represent tag response data
+=======
+// Tag response struct
+>>>>>>> fe4ba0f61cd93ce33257f86208128da3c5f34ca1
 type TagRes struct {
 	Tag          string   `json:"tag"`
 	Count        int      `json:"count"`
@@ -59,7 +63,11 @@ func createArticle(c *gin.Context) {
 func ArticleById(c *gin.Context) {
 	id := c.Param("id")
 	book, err := getArticleById(id)
+<<<<<<< HEAD
 	//if article id not found in articles send, 404 http status with message
+=======
+
+>>>>>>> fe4ba0f61cd93ce33257f86208128da3c5f34ca1
 	if err != nil {
 		c.IndentedJSON(http.StatusNotFound, gin.H{"message": "Article not found."})
 		return
@@ -108,7 +116,10 @@ func getTags(c *gin.Context) {
 		}
 
 	}
+<<<<<<< HEAD
 	//if only there is at least date and tag matches from article
+=======
+>>>>>>> fe4ba0f61cd93ce33257f86208128da3c5f34ca1
 	if tempCount > 0 {
 		log.Print(tempTags)
 		uniqueTags := unique(tempTags, tag)
