@@ -3,10 +3,10 @@
 
 Steps to run the code:
 1. Install the latest version of go
-2.Add Gin module as a dependency 
+2. Add Gin module as a dependency 
   $ go get github.com/gin-gonic/gin 
 3. From the command line in the directory containing main.go, run the code
-$ go run .
+   $ go run .
 4. From a new command line window, use curl to make a request to your running web service.
 
       i. Get the articles
