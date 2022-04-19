@@ -12,6 +12,7 @@ Steps to run the code:
       i. Get the articles
       $ curl http://localhost:8080/articles
       The command should display the data you seeded the service with.
+	  ```json
       [
           {
               "id": "1",
@@ -24,7 +25,8 @@ Steps to run the code:
                   "science"
               ]
           }
-      ]  
+      ] 
+	  ```
 
       ii. Create new article
       For the post request, we have created body.json file which has content to be added in articles. While sending the post request we need to include the request          body as shown below.
@@ -37,7 +39,7 @@ Steps to run the code:
       Content-Type: application/json; charset=utf-8
       Date: Tue, 19 Apr 2022 04:12:22 GMT
       Content-Length: 291
-
+	  ```json
       {
           "id": "51",
           "title": "Eight more COVID-related deaths in NSW",
@@ -49,6 +51,7 @@ Steps to run the code:
               "lifestyle"
           ]
       }
+	  ```
 
 
 
@@ -56,7 +59,7 @@ Steps to run the code:
       When the client makes a request to GET /articles/{id}, article whose ID matches the id path parameter.
       
       $ curl http://localhost:8080/articles/51
-
+```json
       {
           "id": "51",
           "title": "Eight more COVID-related deaths in NSW",
@@ -68,10 +71,14 @@ Steps to run the code:
               "lifestyle"
           ]
       }
+```
 
       iv. The final endpoint, GET /tags/{tagName}/{date} will return the list of articles that have that tag name on the given date and some summary data about that tag for that day.
-      $ curl http://localhost:8080/tags/health/20160922         
-      {
+      $ curl http://localhost:8080/tags/health/20160922    
+	  
+  
+ ```json
+  	 {
           "tag": "health",
           "count": 2,
           "Articles": [
@@ -84,3 +91,4 @@ Steps to run the code:
               "lifestyle"
           ]
       }
+ ```
